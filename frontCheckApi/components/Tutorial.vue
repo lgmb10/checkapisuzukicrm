@@ -112,11 +112,35 @@
         ></a>
       </div>
     </div>
+    <div>
+      <ButtonWithIcon title="rechercher" />
+      {{ info }}
+    </div>
   </div>
 </template>
 
 <script>
+/* import Vue from 'vue'
+import axios from 'axios'
+import { getLocation } from '@/api/apiTest'
+
+Vue.prototype.$axios = axios */
+
 export default {
-  name: 'NuxtTutorial',
-}
+  name: "NuxtTutorial",
+  data() {
+    return {
+      info: null,
+    };
+  },
+  async created() {
+    try {
+      const data = await this.$api.getLocation();
+      this.info = data;
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+};
 </script>
