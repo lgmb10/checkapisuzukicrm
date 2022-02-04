@@ -3,7 +3,7 @@
     <div>
       <button
         type="button"
-        class="flex align-center items-center px-3 py-1 bg-blue-400 rounded-2xl mx-2 hover:shadow-lg hover:shadow-blue-500/50 hover:bg-blue-600 transition-all disabled:bg-gray-200 disabled:shadow-blue-500/0 disabled:cursor-not-allowed checked:bg-red-600"
+        class="flex align-center items-center px-4 py-1 bg-blue-400 rounded-2xl sm:mx-2 mx-1 hover:shadow-lg hover:shadow-blue-500/50 hover:bg-blue-500 transition-all disabled:bg-gray-200 disabled:shadow-blue-500/0 disabled:cursor-not-allowed checked:bg-red-600"
         :disabled="isDisabled"
         :checked="isChecked"
       >

@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <NavLayout />
-  </div>
+  <div></div>
 </template>
 
 <script>
 export default {
   name: "IndexPage",
+  layout: "DefaultLayout",
 };
 </script>

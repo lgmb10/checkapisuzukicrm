@@ -1,18 +1,58 @@
 <template>
-  <div class="m-3 sm:flex justify-center items-center">
-    <SelectDataType />
-    <label class="inline-flex items-center sm:pl-2 pt-4 sm:pt-0">
-      <input
-        type="checkbox"
-        class="form-checkbox h-5 w-5 text-blue-600"
-        checked
-      /><span class="ml-2 text-gray-700">Afficher toutes les données</span>
-    </label>
+  <div class="p-3 pb-8 mb-6 bg-gray-100 z-0 relative">
+    <div class="sm:flex justify-center items-center">
+      <SelectDataType @required-value="setDisable" />
+
+      <transition name="fade">
+        <input
+          type="text"
+          id="inputCode"
+          name="inputCode"
+          required
+          minlength="4"
+          maxlength="8"
+          size="10"
+          class="transition-colors ml-2 px-1 pl-2 border-2 border-solid border-gray-300 rounded-lg w-32 h-8 text-zinc-900 focus:outline-none focus:border-blue-500 hover:border-blue-300 mt-3 sm:mt-0"
+          placeholder="Code"
+          v-if="isEnable"
+        />
+      </transition>
+    </div>
+    <ButtonClassic
+      title="Lancer la recherche"
+      class="absolute shadow-blue-500/50 search_button w-3/4"
+    />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "SearchData",
+  data() {
+    return {
+      isEnable: false,
+    };
+  },
+  methods: {
+    setDisable(event) {
+      this.isEnable = event.dataRequired;
+      console.log(event);
+    },
+  },
+};
 </script>
 
-<style></style>
+<style lang="scss">
+.search_button {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
