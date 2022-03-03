@@ -38,6 +38,9 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/toast",
+    "vue-toastification/nuxt",
+    "@nuxtjs/composition-api/module",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

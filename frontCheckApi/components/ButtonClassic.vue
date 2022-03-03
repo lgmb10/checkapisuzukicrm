@@ -3,9 +3,10 @@
     <div>
       <button
         type="button"
-        class="flex align-center items-center px-4 py-1 bg-blue-400 rounded-2xl mx-2 hover:shadow-lg hover:shadow-blue-500/50 hover:bg-blue-500 transition-all disabled:bg-gray-200 disabled:shadow-blue-500/0 disabled:cursor-not-allowed checked:bg-red-600"
+        class="text-white flex align-center items-center px-4 py-1 bg-blue-400 rounded-2xl mx-2 hover:shadow-lg hover:shadow-blue-500/50 hover:bg-blue-500 transition-all disabled:bg-gray-200 disabled:shadow-blue-500/0 disabled:cursor-not-allowed checked:bg-red-600"
         :disabled="isDisabled"
         :checked="isChecked"
+        v-on:click="$emit('onClick')"
       >
         {{ title }}
       </button>
@@ -16,11 +17,6 @@
 <script>
 export default {
   name: "ButtonClassic",
-  data() {
-    return {
-      info: null,
-    };
-  },
   props: {
     title: { type: String, default: "NaN" },
     isDisabled: { type: Boolean, default: false },
@@ -28,5 +24,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
