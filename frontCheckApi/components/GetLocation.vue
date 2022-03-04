@@ -8,7 +8,7 @@
               <tr>
                 <th
                   scope="col"
-                  class="w-32 text-sm font-medium text-gray-900 px-6 py-4 border bg-gray-100"
+                  class="sm:w-32 text-sm font-medium text-gray-900 px-6 py-4 border bg-gray-100"
                 >
                   id_localite
                 </th>

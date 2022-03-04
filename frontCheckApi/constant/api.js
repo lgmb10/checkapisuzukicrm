@@ -4,4 +4,9 @@ export default [
     id: 2,
     functionPath: "getLocation",
   },
+  {
+    name: "selling-sites",
+    id: 4,
+    functionPath: "getSellingSite",
+  },
 ];

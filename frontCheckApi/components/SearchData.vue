@@ -25,13 +25,15 @@
       />
     </div>
     <div v-if="loaded">
-      <GetLocation v-if="selectedField == 2" :info="data" />
+      <GetLocation
+        v-if="selectedField == 2"
+        :info="data.ListLocalite.Localite"
+      />
     </div>
   </div>
 </template>
 
 <script>
-// import { useToast } from "vue-toastification/composition/nuxt";
 import apiPath from "../constant/api";
 
 export default {
@@ -57,11 +59,10 @@ export default {
         )[0];
         this.$api[found.functionPath]()
           .then((res) => {
-            console.log(res.ListLocalite.Localite);
-            this.data = res.ListLocalite.Localite;
+            console.log(res);
+            this.data = res;
             this.loaded = true;
-            /* const toast = useToast();
-            toast.info("I'm a toast!", {
+            /* this.$toast.info("I'm a toast!", {
               position: "top-center",
               timeout: 5000,
               closeOnClick: true,
@@ -79,9 +80,7 @@ export default {
           .catch((err) => {
             console.log(err);
           })
-          .finally(function () {
-            this.$toast.hide();
-          });
+          .finally();
       }
     },
   },
