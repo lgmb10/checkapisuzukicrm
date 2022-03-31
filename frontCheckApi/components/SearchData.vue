@@ -29,6 +29,7 @@
         v-if="selectedField == 2"
         :info="data.ListLocalite.Localite"
       />
+      <SellingSites v-if="selectedField == 4" :info="data" />
     </div>
   </div>
 </template>

@@ -7,6 +7,6 @@ export default [
   {
     name: "selling-sites",
     id: 4,
-    functionPath: "getSellingSite",
+    functionPath: "getSellingSites",
   },
 ];

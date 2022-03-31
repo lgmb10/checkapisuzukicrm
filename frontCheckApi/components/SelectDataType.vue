@@ -27,7 +27,7 @@ export default {
         { id: 1, name: "Customer Info Request", dataRequired: true },
         { id: 2, name: "Location", dataRequired: false },
         { id: 3, name: "Location Site Request", dataRequired: true },
-        { id: 4, name: "Selling Site", dataRequired: false },
+        { id: 4, name: "Selling Sites", dataRequired: false },
         { id: 5, name: "Selling Site Info Request", dataRequired: true },
         { id: 6, name: "Website Info Request", dataRequired: true },
         { id: 7, name: "User Back Office Request", dataRequired: true },

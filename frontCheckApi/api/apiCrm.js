@@ -2,7 +2,7 @@ export default ({ $axios, baseUrl }) => ({
   getLocation() {
     return $axios.$get(`${baseUrl}/locations`);
   },
-  getSellingSite() {
+  getSellingSites() {
     return $axios.$get(`${baseUrl}/selling-sites`);
   },
   get(path) {

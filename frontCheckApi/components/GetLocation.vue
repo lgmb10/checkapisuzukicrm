@@ -23,7 +23,6 @@
             <tbody v-if="info != null">
               <tr
                 v-for="localite in info"
-                :value="localite.id_localite"
                 :key="localite.id_localite"
                 class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-50"
               >
